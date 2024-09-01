@@ -60,7 +60,7 @@ const SingleRecipe = () => {
 
   return (
     <>
-    <div className="bg-black text-[#fdfdfd] min-h-[90vh] p-10 flex justify-evenly">
+    <div className="bg-black text-[#fdfdfd] min-h-[90vh] p-10 flex justify-evenly flex-wrap sm:gap-20 lg:gap-0">
         {loading ? (
           <p>Loading...</p>
         ) : recipeData ? (
@@ -83,7 +83,7 @@ const SingleRecipe = () => {
                   })
                 }
               </ul>
-              <a href={recipeData.url} className="bg-[#1f1f1f] text-[#73c140] px-4 py-2">View Recipe</a>
+              <a href={recipeData.url} target="_blank" className="bg-[#1f1f1f] text-[#73c140] px-4 py-2">View Recipe</a>
             </div>
           </>
         ) : (

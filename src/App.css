@@ -7,3 +7,16 @@
 .active{
     color:#7dd956;
 }
+
+@media screen and (max-width: 800px){
+    .header-img{
+        width: 200px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .header-img{
+        display: none;
+    }
+}
