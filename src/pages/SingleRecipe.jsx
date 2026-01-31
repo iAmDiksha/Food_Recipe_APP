@@ -70,10 +70,10 @@ const SingleRecipe = () => {
               <img src={recipeData.image} alt=""/>
             </div>
             <h1 className="text-3xl my-4">{recipeData.label}</h1>
-            <p><i class="fa-regular fa-clock"></i> Total Time: {recipeData.totalTime} minutes</p>
+            <p><i className="fa-regular fa-clock"></i> Total Time: {recipeData.totalTime} minutes</p>
             </div>
             <div className="right leading-10">
-              <h2 className="text-2xl mb-4"><i class="fa-solid fa-utensils"></i> Ingredients</h2>
+              <h2 className="text-2xl mb-4"><i className="fa-solid fa-utensils"></i> Ingredients</h2>
               <ul className="list-disc mb-5">
                 {
                   recipeData.ingredientLines.map((item,index)=>{

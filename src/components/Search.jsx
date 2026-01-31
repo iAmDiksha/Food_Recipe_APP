@@ -12,11 +12,15 @@ const Search = ({isCenter}) => {
 
     const navigate = useNavigate();
 
-    const fetchRecipe = async (searchString)=>{
-        const response = await axios.get(`https://api.edamam.com/search?q=${searchString}&app_id=${import.meta.env.VITE_APP_ID}&app_key=${import.meta.env.VITE_APP_KEY}`)
-    
-        setRecipeList(response.data.hits)
-        console.log(recipeList)
+    const fetchRecipe = async (searchString) => {
+        try {
+            // Call backend proxy instead of Edamam API directly
+            const response = await axios.get(`http://localhost:5000/api/recipes?q=${encodeURIComponent(searchString)}`);
+            setRecipeList(response.data.hits);
+            console.log(response.data.hits);
+        } catch (error) {
+            console.error('Error fetching recipes:', error);
+        }
     }
 
     const onTextChange = (e)=>{

@@ -9,7 +9,7 @@ const Card = ({id,name,image,time}) => {
       </div>
       <div className="p-4 text-[#c8c7c9]"> 
           <h2 className="text-xl">{name}</h2>
-          <p className="m-2"><i class="fa-regular fa-clock"></i> Time: {time} minutes</p>
+          <p className="m-2"><i className="fa-regular fa-clock"></i> Time: {time} minutes</p>
           <Link to={`/recipes/${id}`} className="underline">View Recipe</Link>
       </div>
     </div>
